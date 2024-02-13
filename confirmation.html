@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تأكيد الاشتراك</title>
+</head>
+<body>
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $subscriptionTitle = $_POST["subscriptionTitle"];
+            $subscriptionPrice = $_POST["subscriptionPrice"];
+            $emailAddress = $_POST["emailAddress"];
+            // يمكنك استخدام البيانات كما تحتاج هنا
+        }
+    ?>
+    <h2>لقد تم تأكيد الاشتراك بنجاح!</h2>
+    <p>تفاصيل الاشتراك:</p>
+    <ul>
+        <li><strong>عنوان الاشتراك:</strong> <?php echo $subscriptionTitle; ?></li>
+        <li><strong>سعر الاشتراك:</strong> <?php echo $subscriptionPrice; ?></li>
+        <li><strong>عنوان البريد الإلكتروني:</strong> <?php echo $emailAddress; ?></li>
+    </ul>
+</body>
+</html>
